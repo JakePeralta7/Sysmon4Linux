@@ -3,7 +3,32 @@
 
     <!-- Event ID 1 == ProcessCreate. Log all newly created processes -->
     <RuleGroup name="" groupRelation="or">
-      <ProcessCreate onmatch="exclude"/>
+      <ProcessCreate onmatch="exclude">
+        <Rule name="" groupRelation="and">
+          <Image condition="is">/usr/bin/groups</Image>
+          <ParentImage condition="is">/usr/bin/bash</ParentImage>
+        </Rule>
+        <Rule name="" groupRelation="and">
+          <Image condition="is">/usr/bin/locale-check</Image>
+          <ParentImage condition="is">/usr/bin/bash</ParentImage>
+        </Rule>
+        <Rule name="" groupRelation="and">
+          <Image condition="is">/usr/bin/dircolors</Image>
+          <ParentImage condition="is">/usr/bin/bash</ParentImage>
+        </Rule>
+        <Rule name="" groupRelation="and">
+          <Image condition="is">/usr/bin/mesg</Image>
+          <ParentImage condition="is">/usr/bin/bash</ParentImage>
+        </Rule>
+        <Rule name="" groupRelation="and">
+          <Image condition="is">/usr/bin/dirname</Image>
+          <CommandLine condition="is">dirname /usr/bin/lesspipe</CommandLine>
+        </Rule>
+        <Rule name="" groupRelation="and">
+          <Image condition="is">/usr/bin/basename</Image>
+          <ParentImage condition="is">/usr/bin/dash</ParentImage>
+        </Rule>
+      </ProcessCreate>
     </RuleGroup>
 
     <!-- Event ID 3 == NetworkConnect Detected. Log all network connections -->
@@ -35,6 +60,6 @@
     <RuleGroup name="" groupRelation="or">
       <FileDelete onmatch="exclude"/>
     </RuleGroup>
-    
+
   </EventFiltering>
 </Sysmon>
