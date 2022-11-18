@@ -29,3 +29,12 @@ sudo /opt/sysinternalsEBPF/libsysinternalsEBPFinstaller
 wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/config.xml
 sudo /opt/sysmon/sysmon -i config.xml -accepteula
 ```
+
+## Usage
+We can see sysmon logs locally using SysmonLogView
+```
+cat /var/log/syslog | /opt/sysmon/sysmonLogView
+```
+
+## Resources
+[Sysmon for Linux](https://medium.com/@olafhartong/sysmon-for-linux-57de7ca48575)
