@@ -55,8 +55,8 @@
     <RuleGroup name="" groupRelation="or">
       <FileCreate onmatch="exclude">
         <Rule name="" groupRelation="and">
-          <Image condition="is">/opt/splunk/bin/splunkd</Image>
-          <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk</TargetFilename>
+          <Image condition="begin with">/opt/splunk/bin/</Image>
+          <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk/</TargetFilename>
         </Rule>
       </FileCreate>
     </RuleGroup>
@@ -64,8 +64,8 @@
     <!--Event ID 23 == FileDelete. Log all files being deleted -->
     <RuleGroup name="" groupRelation="or">
       <FileDelete onmatch="exclude">
-      <Image condition="is">/opt/splunk/bin/splunkd</Image>
-	    <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk</TargetFilename>
+      <Image condition="begin with">/opt/splunk/bin/</Image>
+	    <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk/</TargetFilename>
       </FileDelete>
     </RuleGroup>
 
