@@ -21,8 +21,11 @@ sudo dpkg -i packages-microsoft-prod.deb
 ```
 sudo apt-get update
 sudo apt-get install sysmonforlinux
+sudo /opt/sysinternalsEBPF/libsysinternalsEBPFinstaller
 ```
 
 3. Configure Sysmon
 ```
 wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/config.xml
+sudo /opt/sysmon/sysmon -i config.xml -accepeula
+```
