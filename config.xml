@@ -56,7 +56,7 @@
       <FileCreate onmatch="exclude">
         <Rule name="" groupRelation="and">
           <Image condition="is">/opt/splunk/bin/splunkd</Image>
-          <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk</ParentImage>
+          <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk</TargetFilename>
         </Rule>
       </FileCreate>
     </RuleGroup>
