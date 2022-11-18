@@ -25,4 +25,4 @@ sudo apt-get install sysmonforlinux
 
 3. Configure Sysmon
 ```
-wget 
+wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/config.xml
