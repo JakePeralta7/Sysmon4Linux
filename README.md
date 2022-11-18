@@ -22,3 +22,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 sudo apt-get install sysmonforlinux
 ```
+
+3. Configure Sysmon
+```
+wget 
