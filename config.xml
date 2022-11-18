@@ -53,7 +53,12 @@
 
     <!-- Event ID 11 == FileCreate. Log every file creation -->
     <RuleGroup name="" groupRelation="or">
-      <FileCreate onmatch="exclude"/>
+      <FileCreate onmatch="exclude">
+        <Rule name="" groupRelation="and">
+          <Image condition="is">/opt/splunk/bin/splunkd</Image>
+          <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk</ParentImage>
+        </Rule>
+      </FileCreate>
     </RuleGroup>
 
     <!--Event ID 23 == FileDelete. Log all files being deleted -->
