@@ -38,7 +38,11 @@
 
     <!-- Event ID 5 == ProcessTerminate. Log all processes terminated -->
     <RuleGroup name="" groupRelation="or">
-      <ProcessTerminate onmatch="exclude"/>
+      <ProcessTerminate onmatch="exclude">
+        <Rule name="" groupRelation="and">
+          <Image condition="begin with">/opt/splunk/bin/</Image>
+        </Rule>
+      </ProcessTerminate>
     </RuleGroup>
 
     <!-- Event ID 9 == RawAccessRead. Log all raw access read -->
