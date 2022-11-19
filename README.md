@@ -48,7 +48,7 @@ sudo /opt/sysinternalsEBPF/libsysinternalsEBPFinstaller
 3. Configure Sysmon
 ```
 wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/generic-config.xml
-sudo /opt/sysmon/sysmon -i config.xml -accepteula
+sudo /usr/bin/sysmon -i config.xml -accepteula
 ```
 
 ## Usage
