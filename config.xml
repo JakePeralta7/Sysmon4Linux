@@ -60,7 +60,7 @@
       <FileCreate onmatch="exclude">
         <Rule name="" groupRelation="and">
           <Image condition="begin with">/opt/splunk/bin/</Image>
-          <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk/</TargetFilename>
+          <TargetFilename condition="begin with">/opt/splunk/</TargetFilename>
         </Rule>
       </FileCreate>
     </RuleGroup>
@@ -69,7 +69,7 @@
     <RuleGroup name="" groupRelation="or">
       <FileDelete onmatch="exclude">
       <Image condition="begin with">/opt/splunk/bin/</Image>
-	    <TargetFilename condition="begin with">/opt/splunk/var/lib/splunk/</TargetFilename>
+	    <TargetFilename condition="begin with">/opt/splunk/</TargetFilename>
       </FileDelete>
     </RuleGroup>
 
