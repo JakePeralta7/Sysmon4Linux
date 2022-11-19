@@ -62,6 +62,11 @@
           <Image condition="begin with">/opt/splunk/bin/</Image>
           <TargetFilename condition="begin with">/opt/splunk/</TargetFilename>
         </Rule>
+
+        <Rule name="" groupRelation="and">
+          <Image condition="begin with">/opt/splunk/bin/splunkd</Image>
+          <TargetFilename condition="begin with">/proc/</TargetFilename>
+        </Rule>
       </FileCreate>
     </RuleGroup>
 
