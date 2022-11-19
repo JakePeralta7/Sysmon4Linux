@@ -54,7 +54,7 @@ sudo sysmon -i generic-config.xml -accepteula
 ## Usage
 We can see sysmon logs locally using SysmonLogView
 ```
-cat /var/log/syslog | /opt/sysmon/sysmonLogView
+cat /var/log/messages | /opt/sysmon/sysmonLogView
 ```
 
 ## Resources
