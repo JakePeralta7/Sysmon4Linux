@@ -27,7 +27,7 @@ sudo /opt/sysinternalsEBPF/libsysinternalsEBPFinstaller
 
 3. Configure Sysmon
 ```
-wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/splunk-config.xml
+wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/generic-config.xml
 sudo /opt/sysmon/sysmon -i config.xml -accepteula
 ```
 
@@ -44,6 +44,11 @@ sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.
 sudo dnf install sysmonforlinux
 sudo /opt/sysinternalsEBPF/libsysinternalsEBPFinstaller
 ```
+
+3. Configure Sysmon
+```
+wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/generic-config.xml
+sudo /opt/sysmon/sysmon -i config.xml -accepteula
 
 ## Usage
 We can see sysmon logs locally using SysmonLogView
