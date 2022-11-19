@@ -68,8 +68,10 @@
     <!--Event ID 23 == FileDelete. Log all files being deleted -->
     <RuleGroup name="" groupRelation="or">
       <FileDelete onmatch="exclude">
-      <Image condition="begin with">/opt/splunk/bin/</Image>
-	    <TargetFilename condition="begin with">/opt/splunk/</TargetFilename>
+        <Rule name="" groupRelation="and">
+          <Image condition="begin with">/opt/splunk/bin/</Image>
+          <TargetFilename condition="begin with">/opt/splunk/</TargetFilename>
+        </Rule>
       </FileDelete>
     </RuleGroup>
 
