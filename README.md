@@ -31,6 +31,11 @@ wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/generic-co
 sudo sysmon -i generic-config.xml -accepteula
 ```
 
+We can see sysmon logs locally using SysmonLogView
+```
+cat /var/log/syslog | /opt/sysmon/sysmonLogView
+```
+
 ### RHEL 8
 
 1. Register Microsoft key and feed
@@ -51,7 +56,6 @@ wget https://raw.githubusercontent.com/JakePeralta7/Sysmon4Linux/main/generic-co
 sudo sysmon -i generic-config.xml -accepteula
 ```
 
-## Usage
 We can see sysmon logs locally using SysmonLogView
 ```
 cat /var/log/messages | /opt/sysmon/sysmonLogView
